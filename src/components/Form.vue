@@ -1,14 +1,28 @@
 <template>
     <form @submit.stop="() => {}" class="form">
+        <div class="position">
+            <label>ID: </label>
+            <input type="text" class="id" readonly value="Center"/>
+            <label>Latitude: </label>
+            <input type="text" class="gps" readonly value="37.5665"/>
+            <label >longitude: </label>
+            <input type="text" class="gps" readonly value="126.9780"/>
+            <label>X: </label>
+            <input type="text" class="axis" readonly value="0"/>
+            <label >Y: </label>
+            <input type="text" class="axis" readonly value="0"/>
+        </div>
         <div v-for="(marker, idx) in markers" class="position" :key="idx">
-        <label>Latitude: </label>
-        <input type="text" readonly :value="marker.position.lat"/>
-        <label >longitude: </label>
-        <input type="text" readonly :value="marker.position.lng"/>
-        <label>X: </label>
-        <input type="text" readonly :value="marker.position.x"/>
-        <label >Y: </label>
-        <input type="text" readonly :value="marker.position.y"/>
+            <label>ID: </label>
+            <input type="text" class="id" readonly :value="marker.position.id"/>
+            <label>Latitude: </label>
+            <input type="text" class="gps" readonly :value="marker.position.lat"/>
+            <label >longitude: </label>
+            <input type="text" class="gps" readonly :value="marker.position.lng"/>
+            <label>X: </label>
+            <input type="text" class="axis" readonly :value="marker.position.x"/>
+            <label >Y: </label>
+            <input type="text" class="axis" readonly :value="marker.position.y"/>
         </div>
         <div class="wrap-btn">
             <button type="button" @click="start">Start</button>
@@ -134,5 +148,14 @@ export default {
 }
 .status {
     color: lightcoral;
+}
+.id {
+    width: 55px;
+}
+.axis {
+    width: 50px;
+}
+.gps {
+    width: 120px;
 }
 </style>
