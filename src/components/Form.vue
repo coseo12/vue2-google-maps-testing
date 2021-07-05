@@ -95,11 +95,12 @@ export default {
             const fn = () => {
                 const arr = [];
 
-                for(let i = 0; i < this.markers.length; i++) {
+                for(let i = 0; i < 10; i++) {
                     const x = Number((Math.random()*3).toFixed(2)) * (Math.round(Math.random()) ? 1 : -1);
                     const y = Number((Math.random()*3).toFixed(2)) * (Math.round(Math.random()) ? 1 : -1);
                     const obj = {
                         position: {
+                            id: i,
                             lat: convertDMSToDD(lat_degrees, lat_minutes, lat_seconds + y),
                             lng: convertDMSToDD(lng_degrees, lng_minutes, lng_seconds + x),
                             x,

@@ -19,7 +19,7 @@
           :position="m.position"
           :clickable="true"
           :draggable="false"
-          :label="`x: ${m.position.x}, y: ${m.position.y}`"
+          :label="`id: ${m.position.id}, x: ${m.position.x}, y: ${m.position.y}`"
           @click="onClick"
           @dragend="onDragend"
         />
