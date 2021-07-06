@@ -29,20 +29,20 @@
 
 <script>
 export default {
-    props: {
-        markers: {
-            field: Array,
-            required: true,
-        }
-    },
-    methods: {
+  props: {
+      markers: {
+          field: Array,
+          required: true,
+      }
+  },
+  methods: {
     onClick(ev) {
         console.log(ev)
     },
     onDragend(ev) {
         console.log(ev)
     }
-    }
+  }
 }
 </script>
 
